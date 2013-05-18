@@ -2,7 +2,7 @@
     init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
         // First get the latest data that we're bound to
         var value = valueAccessor();
-
+            
         // Initial Kendo color
         $(element).kendoColorPicker({
             value: "#ffffff",

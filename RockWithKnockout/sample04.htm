@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/kendo/2013.1.319/kendo.common.min.css" rel="stylesheet" />
+    <link href="Content/kendo/2013.1.319/kendo.default.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h2>Product Demo</h2>
+        <div class="row">
+            <div class="btn-group">
+                <button class="btn" data-bind="click: switchMode.bind($data, 'list'), css: { active: mode() === 'list' }">
+                    <i class="icon-align-justify"></i>
+                    列表
+                </button>
+                <button class="btn" data-bind="click: switchMode.bind($data, 'image'), css: { active: mode() === 'image' }">
+                    <i class="icon-th-large"></i>
+                    圖示
+                </button>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;" data-bind="foreach: products">
+            <div class="span4">
+                <div>
+                    <p class="text-center">
+                        <img class="img-polaroid" data-bind="attr: { src: image }" />
+                    </p>
+                </div>
+                <div>
+                    <p class="text-center">
+                        <strong data-bind="text: title"></strong>
+                    </p>
+                    <p class="text-center">
+                        <small>原價<span data-bind="text: suggestPrice"></span>元</small>
+                        <strong style="color: red">特價<span data-bind="text: price"></span>元</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/kendo/2013.1.319/kendo.web.min.js"></script>
+    <script src="Scripts/knockout-2.2.1.js"></script>
+    <script src="Scripts/App/Extension/kendoColor.js"></script>
+    <script src="Scripts/App/Extension/kendoNumber.js"></script>
+    <script src="Scripts/App/Extension/kendoDate.js"></script>
+    <script src="Scripts/App/ViewModel/sample04.js"></script>
+</body>
+</html>
