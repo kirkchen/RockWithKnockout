@@ -152,12 +152,14 @@
       <DependentUpon>app.ts</DependentUpon>
     </Content>
     <Content Include="sample02.htm" />
+    <Content Include="sample03.htm" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\App\Extension\kendoColor.js" />
     <Content Include="Scripts\App\Extension\kendoNumber.js" />
     <Content Include="Scripts\App\Extension\kendoDate.js" />
     <Content Include="Scripts\App\ViewModel\sample01.js" />
     <Content Include="Scripts\App\ViewModel\sample02.js" />
+    <Content Include="Scripts\App\ViewModel\sample03.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
