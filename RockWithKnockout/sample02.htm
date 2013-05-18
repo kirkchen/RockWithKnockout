@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>TypeScript HTML App</title>
+    <title>Rock With Knockout</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/kendo/2013.1.319/kendo.common.min.css" rel="stylesheet" />
     <link href="Content/kendo/2013.1.319/kendo.default.min.css" rel="stylesheet" />
@@ -19,16 +19,18 @@
             <input id="createdate" type="date" data-bind="date: createdate" />
 
             <label for="price">Price:</label>
-            <input id="price" type="number" data-bind="number: price, numberFormat: 'c'" />
+            <input id="price" type="number" data-bind="number: price" />
 
             <label for="cost">Cost:</label>
-            <input id="cost" type="number" data-bind="number: cost, numberFormat: 'c'" />
+            <input id="cost" type="number" data-bind="number: cost" />
 
             <label for="color">Color:</label>
             <input id="color" data-bind="color: color" />
 
             <div style="margin-top: 10px">
-                <button id="submit" class="btn btn-large btn-primary" type="button" data-bind="click: onSubmit">Submit</button>
+                <button id="submit" class="btn btn-large btn-primary"
+                    type="button" data-bind="click: onSubmit">
+                    Submit</button>
             </div>
         </form>
     </div>

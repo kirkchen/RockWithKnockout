@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>TypeScript HTML App</title>
+    <title>Rock With Knockout</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/kendo/2013.1.319/kendo.common.min.css" rel="stylesheet" />
     <link href="Content/kendo/2013.1.319/kendo.default.min.css" rel="stylesheet" />
@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <h2>Product Demo</h2>
+        <!--功能列-->
         <div class="row">
             <div class="btn-group">
                 <button class="btn" data-bind="click: switchMode.bind($data, 'list'), css: { active: mode() === 'list' }">
@@ -23,7 +24,32 @@
                 </button>
             </div>
         </div>
-        <div class="row" style="margin-top: 15px;" data-bind="foreach: products">
+        <!--產品清單-->
+        <div class="row" style="margin-top: 15px;" data-bind="template: { name: getTemplateName, foreach: products }">
+        </div>
+        <!--列表模式-->
+        <script type="text/html" id="list-template">
+            <div class="span12">
+                <div class="pull-left">
+                    <p class="text-center">
+                        <img class="img-polaroid" data-bind="attr: { src: image }" style="display: block; width: 100px; height: 100px" />
+                    </p>
+                </div>
+                <div class="pull-right">
+                    <p class="text-center">
+                        <strong data-bind="text: title"></strong>
+                    </p>
+                    <p class="text-center">
+                        <small>原價<span data-bind="text: suggestPrice"></span>元</small>
+                        <strong style="color: red">特價<span data-bind="text: price"></span>元</strong>
+                    </p>
+                </div>
+                <div data-bind="text: description">
+                </div>
+            </div>
+        </script>
+        <!--圖片模式-->
+        <script type="text/html" id="image-template">
             <div class="span4">
                 <div>
                     <p class="text-center">
@@ -40,7 +66,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </script>
     </div>
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/kendo/2013.1.319/kendo.web.min.js"></script>

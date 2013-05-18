@@ -3,14 +3,14 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>TypeScript HTML App</title>
+    <title>Rock With Knockout</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/kendo/2013.1.319/kendo.common.min.css" rel="stylesheet" />
     <link href="Content/kendo/2013.1.319/kendo.default.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
-        <h2>Please enter product infomation</h2>
+        <h2>Product infomation</h2>               
         <form>
             <label for="name">Name:</label>
             <input id="name" type="text" />
@@ -25,13 +25,16 @@
             <input id="cost" type="number" />
 
             <label for="color">Color:</label>
-            <input id="color" />
+            <input id="color" />            
 
             <div style="margin-top: 10px">
-                <button id="submit" class="btn btn-large btn-primary" type="button">Submit</button>
+                <button id="submit" 
+                    class="btn btn-large btn-primary" 
+                    type="button">Submit</button>
             </div>
         </form>
     </div>
+
     <script src="Scripts/jquery-1.9.1.min.js"></script>    
     <script src="Scripts/kendo/2013.1.319/kendo.web.min.js"></script>
     <script src="Scripts/App/ViewModel/sample01.js"></script>
