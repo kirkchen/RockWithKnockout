@@ -13,23 +13,23 @@
         <h2>Please enter product infomation</h2>
         <form>
             <label for="name">Name:</label>
-            <input id="name" type="text" />
+            <input id="name" type="text" data-bind="value: name" />
 
             <label for="createdate">Create Date:</label>
-            <input id="createdate" type="date"  />
+            <input id="createdate" type="date" data-bind="date: createdate" />
 
             <label for="price">Price:</label>
-            <input id="price" type="number" />
+            <input id="price" type="number" data-bind="number: price" />
 
             <label for="cost">Cost:</label>
-            <input id="cost" type="number" />
+            <input id="cost" type="number" data-bind="number: cost" />
 
             <label for="color">Color:</label>
-            <input id="color"  />
+            <input id="color" data-bind="color: color" />
 
             <div style="margin-top: 10px">
                 <button id="submit" class="btn btn-large btn-primary"
-                    type="button" >
+                    type="button" data-bind="click: onSubmit">
                     Submit</button>
             </div>
         </form>

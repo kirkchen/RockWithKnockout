@@ -6,6 +6,10 @@
     self.createdate = ko.observable('2013/05/18');
     self.color = ko.observable('#873434');
 
+    self.displayName = ko.computed(function () {
+        return 'This is product' + self.name();
+    });
+
     self.onSubmit = function () {
         var product = ko.toJSON(this);
 
@@ -13,4 +17,5 @@
     };
 }
 
-ko.applyBindings(new viewModel());
+var model = new viewModel();
+ko.applyBindings(model);
