@@ -17,9 +17,9 @@ var displayMode = {
 var ProductList = function () {
     var self = this;
 
-    self.mode = ko.observable(displayMode.Image);
-
     self.products = products;
+
+    self.mode = ko.observable(displayMode.Image);
 
     self.switchMode = function (mode) {
         self.mode(mode);
